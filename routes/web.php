@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\productController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/khksdbfhjạhsbdjbábda//
+*/
 //index
 Route::get('/', function () {
     return view('client/index');
@@ -34,6 +38,6 @@ Route::get('/news/details', function () {
 Route::get('/product', function () {
     return view('client/products/list');
 });
-Route::get('/product/details', function () {
-    return view('client/products/details');
-});
+Route::get('/product/details/{id}',[productController::class,'details']);
+
+
