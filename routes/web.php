@@ -16,15 +16,17 @@ use App\Http\Controllers\productController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//index
+
+
+
 Route::get('/', function () {
-    return view('client/index');
+    return view('welcome');
 });
 
-// categories
-Route::get('/product-by-category', function () {
-    return view('client/categories/list');
-});
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
 
 //news
 Route::get('/news', function () {
@@ -40,4 +42,7 @@ Route::get('/product', function () {
 });
 Route::get('/product/details/{id}',[productController::class,'details']);
 
+
+
+require __DIR__.'/auth.php';
 

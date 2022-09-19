@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Illuminate\Support\Arr;
 
 class ProductsSeeders extends Seeder
 {
@@ -17,7 +19,6 @@ class ProductsSeeders extends Seeder
     {
         //
         $this->faker = \Faker\Factory::create();
-
 
 
         for ($i=1; $i <= 50 ; $i++) {
