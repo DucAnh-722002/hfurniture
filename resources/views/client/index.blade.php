@@ -1018,23 +1018,21 @@
                 <div class="col-md-4 col-sm-6 col-xs-6 pupoler-items">
                     <div class="items-carosel-single">
                         <div class="heading-title">
-                            <h3 class="title-text">Xem nhiều</h3>
+                            <h3 class="title-text">Nổi bật</h3>
                         </div>
                         <!--/.heading-title-->
                         <div id="pupoler-items-slide">
                             <ul class="item-list">
-                                @foreach ($popular as $p)
                                 <li class="item">
-                                    <div class="product-thumb"> <img src="{{$p->image}}" alt="img"> </div>
+                                    <div class="product-thumb"> <img src="assets/images/small_gallery/01.jpg" alt="img"> </div>
                                     <div class="product-info">
-                                        <h2>{{$p->name}}</h2>
-                                        <div class="price"> {{$p->price}} </div>
-                                        <a class="cart-btn btn" href="">add to cart</a>
+                                        <h2>White Stripe T-Shirt</h2>
+                                        <div class="price"> $40 <del> $50 </del> </div>
+                                        <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
                                 </li>
-                                @endforeach
                                 <!--/.item-->
-                                {{-- <li class="item">
+                                <li class="item">
                                     <div class="product-thumb"> <img src="assets/images/small_gallery/02.jpg" alt="img"> </div>
                                     <div class="product-info">
                                         <h2>White Stripe T-Shirt</h2>
@@ -1050,23 +1048,21 @@
                                         <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <!--/.item-->
                             </ul>
                             <!--/.item-list-->
                             <ul class="item-list">
-                                @foreach ($popular2 as $p2)
                                 <li class="item">
-                                    <div class="product-thumb"> <img src="{{$p2->image}}" alt="img"> </div>
+                                    <div class="product-thumb"> <img src="assets/images/small_gallery/04.jpg" alt="img"> </div>
                                     <div class="product-info">
-                                        <h2>{{$p2->name}}</h2>
-                                        <div class="price"> {{$p2->price}} </div>
+                                        <h2>White Stripe T-Shirt</h2>
+                                        <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
                                 </li>
-                                @endforeach
                                 <!--/.item-->
-                                {{-- <li class="item">
+                                <li class="item">
                                     <div class="product-thumb"> <img src="assets/images/small_gallery/05.jpg" alt="img"> </div>
                                     <div class="product-info">
                                         <h2>White Stripe T-Shirt</h2>
@@ -1082,7 +1078,7 @@
                                         <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <!--/.item-->
                             </ul>
                             <!--/.item-list-->
@@ -1100,18 +1096,16 @@
                         <!--/.heading-title-->
                         <div id="latest-items-slide">
                             <ul class="item-list">
-                                @foreach($newest as $n)
                                 <li class="item">
-                                    <div class="product-thumb"> <img src="{{$n->image}}}" alt="img"> </div>
+                                    <div class="product-thumb"> <img src="assets/images/small_gallery/07.jpg" alt="img"> </div>
                                     <div class="product-info">
-                                        <h2>{{$n->name}}</h2>
-                                        <div class="price"> {{$n->price}}</div>
-                                        <a class="cart-btn btn" href="">add to cart</a>
+                                        <h2>White Stripe T-Shirt</h2>
+                                        <div class="price"> $40 <del> $50 </del> </div>
+                                        <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
                                 </li>
-                                @endforeach
                                 <!--/.item-->
-                                {{-- <li class="item">
+                                <li class="item">
                                     <div class="product-thumb"> <img src="assets/images/small_gallery/08.jpg" alt="img"> </div>
                                     <div class="product-info">
                                         <h2>White Stripe T-Shirt</h2>
@@ -1127,23 +1121,21 @@
                                         <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <!--/.item-->
                             </ul>
                             <!--/.item-list-->
                             <ul class="item-list">
-                                @foreach ( $newest2 as $n2)
                                 <li class="item">
-                                    <div class="product-thumb"> <img src="{{$n2->image}}" alt="img"> </div>
+                                    <div class="product-thumb"> <img src="assets/images/small_gallery/10.jpg" alt="img"> </div>
                                     <div class="product-info">
-                                        <h2>{{$n2->name}}</h2>
-                                        <div class="price"> {{$n2->price}} </div>
+                                        <h2>White Stripe T-Shirt</h2>
+                                        <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
                                 </li>
-                                @endforeach
                                 <!--/.item-->
-                                {{-- <li class="item">
+                                <li class="item">
                                     <div class="product-thumb"> <img src="assets/images/small_gallery/11.jpg" alt="img"> </div>
                                     <div class="product-info">
                                         <h2>White Stripe T-Shirt</h2>
@@ -1159,7 +1151,7 @@
                                         <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <!--/.item-->
                             </ul>
                             <!--/.item-list-->
@@ -1172,23 +1164,21 @@
                 <div class="col-md-4 col-sm-6 col-xs-6 top-sellers">
                     <div class="items-carosel-single">
                         <div class="heading-title">
-                            <h3 class="title-text">Nổi bật</h3>
+                            <h3 class="title-text">bán chạy</h3>
                         </div>
                         <!--/.heading-title-->
                         <div id="topsell-items-slide">
                             <ul class="item-list">
-                                @foreach ($sold as $s)
                                 <li class="item">
-                                    <div class="product-thumb"> <img src="{{$s->image}}" alt="img"> </div>
+                                    <div class="product-thumb"> <img src="assets/images/small_gallery/10.jpg" alt="img"> </div>
                                     <div class="product-info">
-                                        <h2>{{$s->name}}</h2>
-                                        <div class="price"> {{$s->price}} </div>
+                                        <h2>White Stripe T-Shirt</h2>
+                                        <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
                                 </li>
-                                @endforeach
                                 <!--/.item-->
-                                {{-- <li class="item">
+                                <li class="item">
                                     <div class="product-thumb"> <img src="assets/images/small_gallery/11.jpg" alt="img"> </div>
                                     <div class="product-info">
                                         <h2>White Stripe T-Shirt</h2>
@@ -1204,23 +1194,21 @@
                                         <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <!--/.item-->
                             </ul>
                             <!--/.item-list-->
                             <ul class="item-list">
-                                @foreach ( $sold2 as $s2)
                                 <li class="item">
-                                    <div class="product-thumb"> <img src="{{$s2->image}}" alt="img"> </div>
+                                    <div class="product-thumb"> <img src="assets/images/small_gallery/04.jpg" alt="img"> </div>
                                     <div class="product-info">
-                                        <h2>{{$s2->name}}</h2>
-                                        <div class="price"> {{$s2->price}}  </div>
+                                        <h2>White Stripe T-Shirt</h2>
+                                        <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
                                 </li>
-                                @endforeach
                                 <!--/.item-->
-                                {{-- <li class="item">
+                                <li class="item">
                                     <div class="product-thumb"> <img src="assets/images/small_gallery/05.jpg" alt="img"> </div>
                                     <div class="product-info">
                                         <h2>White Stripe T-Shirt</h2>
@@ -1236,7 +1224,7 @@
                                         <div class="price"> $40 <del> $50 </del> </div>
                                         <a class="cart-btn btn" href="single-product.html">add to cart</a>
                                     </div>
-                                </li> --}}
+                                </li>
                                 <!--/.item-->
                             </ul>
                             <!--/.item-list-->

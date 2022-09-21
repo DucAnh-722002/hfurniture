@@ -159,8 +159,13 @@
                                     <div class="col-md-3 col-sm-6">
                                         <h5 class="title">Shop Pages</h5>
                                         <ul>
-                                            <li><a href="{{url('product-by-category')}}">Test sản phẩm theo thể loại</a>
+                                            @php
+                                                $list = DB::table('categories')->get();
+                                            @endphp
+                                            @foreach($list as $t)
+                                            <li><a href="{{ url('/theloai/'.$t->id) }}">{{$t->name}}</a>
                                             </li>
+                                            @endforeach
                                             <li><a href="shop-list-sidebar.html">Shop List With Sidebar</a>
                                             </li>
                                             <li><a href="shop-grid.html">Shop Grid</a>

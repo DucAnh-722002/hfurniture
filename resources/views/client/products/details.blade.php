@@ -65,81 +65,71 @@
                                 </ul>
                             </div>
                         </div>
-                       
-                        <div class="col-md-7"> 
-                            <div class="right-content"> 
-                                
-                                <div class="product-info"> 
-                                    @foreach ($products as $sp) 
-                                    @endforeach 
-                                    <h2>{{$products->name}}</h2> 
-                                    <div class="price"> 
-                                        {{$products->price}} 
-                                    </div> 
-                                    <div class="product-description"> 
-                                        <h5 class="small-title">Chi Tiết</h5> 
-                                        <p>{{$products->description}}</p> 
-                                    </div> 
-                                    
-                                    <div class="item-color"> 
-                                        <h5 class="small-title">select a colour</h5> 
-                                        <div class="colors-content"> 
-                                            <input type="checkbox" name="color" id="olive1"> 
-                                            <label for="olive1" class="olive"></label>                                             <input type="checkbox" name="color" id="chocolate1"> 
-                                            <label for="chocolate1" class="chocolate"></label> 
-                                            <input type="checkbox" name="color" id="deeppink1"> 
-                                            <label for="deeppink1" class="deeppink"></label> 
-                                            <input type="checkbox" checked="" name="color" id="blue1"> 
-                                            <label for="blue1" class="blue"></label> 
-                                        </div> 
-                                    </div> 
-                                    <div class="item-size"> 
-                                        <h5 class="small-title">choose a size</h5> 
-                                        <div class="size-content"> 
-                                            <input type="radio" name="size" id="xs1" value="xs"> 
-                                            <label for="xs1"><span>XS</span> 
-                                            </label> 
-                                            <input type="radio" name="size" id="s1" value="s"> 
-                                            <label for="s1"><span>s</span> 
-                                            </label> 
-                                            <input type="radio" checked="checked" name="size" id="m1" value="m"> 
-                                            <label for="m1"><span>m</span> 
-                                            </label> 
-                                            <input type="radio" name="size" id="l1" value="l"> 
-                                            <label for="l1"><span>l</span> 
-                                            </label> 
-                                            <input type="radio" name="size" id="xl1" value="xl"> 
-                                            <label for="xl1"><span>xl</span> 
-                                            </label> 
-                                        </div> 
-                                    </div> 
-                                    <div class="product-desc"> 
-                                        <span class="item-number"><b>Product Number:</b>  #41121120</span> 
-                                        <br> 
-                                        <span class="item-cat"><b>Category:</b>  Men's Suits</span> 
-                                        <br> 
-                                        <span class="item-tag"><b>Tags:</b>  elegant, men, shirt, clean</span> 
-                                    </div> 
-                                    <div class="actions"> 
-                                        <ul> 
-                                            <li><a class="add-cart" href="singleproduct.html"><span><span class="icon_plus"></span></span> add to cart</a> 
-                                            </li> 
-                                            <li><a href="#"><span class="icon_heart_alt"></span></a> 
-                                            </li> 
-                                            <li><a class="zoom" href="assets/images/gallery_men/single-shop-details/big/image1xxl.jpg"><span class="arrow_expand"></span></a> 
-                                            </li> 
-                                        </ul> 
-                                    </div> 
-                                </div> 
-                    
-    </div>
-                                
-                            </div> 
-                        </div> 
-                       
- 
- 
-
+                        <div class="col-md-7">
+                            <div class="right-content">
+                                <div class="product-info">
+                                    <h2>red Stripe T-Shirt</h2>
+                                    <h4 class="product-name">T-Shirt</h4>
+                                    <div class="price">
+                                        $40 <del> $50 </del>
+                                    </div>
+                                    <div class="product-description">
+                                        <h5 class="small-title">DESCRIPTION</h5>
+                                        <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                                    </div>
+                                    <div class="item-color">
+                                        <h5 class="small-title">select a colour</h5>
+                                        <div class="colors-content">
+                                            <input type="checkbox" name="color" id="olive1">
+                                            <label for="olive1" class="olive"></label>
+                                            <input type="checkbox" name="color" id="chocolate1">
+                                            <label for="chocolate1" class="chocolate"></label>
+                                            <input type="checkbox" name="color" id="deeppink1">
+                                            <label for="deeppink1" class="deeppink"></label>
+                                            <input type="checkbox" checked="" name="color" id="blue1">
+                                            <label for="blue1" class="blue"></label>
+                                        </div>
+                                    </div>
+                                    <div class="item-size">
+                                        <h5 class="small-title">choose a size</h5>
+                                        <div class="size-content">
+                                            <input type="radio" name="size" id="xs1" value="xs">
+                                            <label for="xs1"><span>XS</span>
+                                            </label>
+                                            <input type="radio" name="size" id="s1" value="s">
+                                            <label for="s1"><span>s</span>
+                                            </label>
+                                            <input type="radio" checked="checked" name="size" id="m1" value="m">
+                                            <label for="m1"><span>m</span>
+                                            </label>
+                                            <input type="radio" name="size" id="l1" value="l">
+                                            <label for="l1"><span>l</span>
+                                            </label>
+                                            <input type="radio" name="size" id="xl1" value="xl">
+                                            <label for="xl1"><span>xl</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="product-desc">
+                                        <span class="item-number"><b>Product Number:</b>  #41121120</span>
+                                        <br>
+                                        <span class="item-cat"><b>Category:</b>  Men's Suits</span>
+                                        <br>
+                                        <span class="item-tag"><b>Tags:</b>  elegant, men, shirt, clean</span>
+                                    </div>
+                                    <div class="actions">
+                                        <ul>
+                                            <li><a class="add-cart" href="single-product.html"><span><span class="icon_plus"></span></span> add to cart</a>
+                                            </li>
+                                            <li><a href="#"><span class="icon_heart_alt"></span></a>
+                                            </li>
+                                            <li><a class="zoom" href="assets/images/gallery_men/single-shop-details/big/image1xxl.jpg"><span class="arrow_expand"></span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-md-12">
                         <div class="product-tab">

@@ -1,11 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-use Illuminate\Support\Facades\DB;
-use App\Http\Controllers\productController;
-
-
+use App\Http\Controllers\HomeConntroller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,32 +13,29 @@ use App\Http\Controllers\productController;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-
-Route::get('/', function () {
-    return view('welcome');
+//categories
+Route::get('/', [HomeConntroller::class, 'index']);
+Route::get('theloai/{id}',[HomeConntroller::class,'sptloai'])->name('sptl');
+Route::get('/news',function(){
+        return view('client/news/list');
+});
+Route::get('/news/details',function(){
+        return view('client/news/details');
+});
+//products
+Route::get('/product',function(){
+        return view('ciclient/products/list');
+});
+Route::get('/product/details',function(){
+        return view('ciclient/product/details');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-
-//news
-Route::get('/news', function () {
-    return view('client/news/list');
-});
-Route::get('/news/details', function () {
-    return view('client/news/details');
-});
-
-//products
-Route::get('/product', function () {
-    return view('client/products/list');
-});
-Route::get('/product/details/{id}',[productController::class,'details']);
-
-
-
 require __DIR__.'/auth.php';
-

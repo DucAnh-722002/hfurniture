@@ -1,6 +1,9 @@
 @extends('layout')
 
 @section('content')
+{{-- @php
+    var_dump($data)
+@endphp --}}
 <div id="#content" class="site-content">
     <div class="container">
         <!--page title-->
@@ -27,8 +30,10 @@
                             <h3 class="ui-accordion-header ui-state-default ui-accordion-header-active ui-state-active ui-corner-top ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="true" aria-expanded="true" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-s"></span>man</h3>
                             <div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom ui-accordion-content-active" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="false" style="display: block; height: 359px;">
                                 <ul>
-                                    <li><a href="{{url('product/details')}}" class="triangle">Loungewear <span>(8)</span></a>
+                                    {{-- @foreach($sptl as $t)
+                                    <li><a href="{{ Route('sptl', ['id' => $t->id]) }}" class="triangle">Loungewear <span>(8)</span></a>
                                     </li>
+                                    @endforeach --}}
                                     <li><a href="shop-grid.html" class="triangle">Oversized &amp; Longline <span>(10)</span></a>
                                     </li>
                                     <li><a href="shop-grid.html" class="triangle">Polo Shirts <span>(30)</span></a>
@@ -261,7 +266,7 @@
                         <div class="tb">
                             <div class="tb-cell">
                                 <h2>Find your summer look</h2>
-                                <h4>SUMMER COLLECTION</h4>
+                                <h4>{{$loai->name}}</h4>
                                 <a href="{{url('product/details')}}" class="details-btn btn">collection</a>
                             </div>
                         </div>
@@ -294,6 +299,7 @@
                     <div class="row">
                         <div class="shop-product-list shop-list">
                             <div class="col-md-12">
+                                @foreach ($data as $item)
                                 <div class="product-single">
                                     <div class="col-md-4 col-sm-5 col-xs-5">
                                         <div class="product-thumb">
@@ -301,15 +307,16 @@
                                         </div>
                                         <!--/.product-thumb-->
                                     </div>
+                                    <div ></div>
                                     <div class="col-md-8 col-sm-7 col-xs-7">
                                         <div class="product-info">
-                                            <h2>White Stripe T-Shirt</h2>
+                                            <h2>{{$item->name}}</h2>
                                             <h4 class="product-name">T-Shirt</h4>
                                             <div class="price">
-                                                $40 <del> $50 </del>
+                                                {{$item->price}} 
                                             </div>
                                             <div class="entry-content">
-                                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                                                <p>{{$item->description}}</p>
                                             </div>
                                             <div class="actions">
                                                 <ul>
@@ -325,105 +332,8 @@
                                         <!--/.product-info-->
                                     </div>
                                 </div>
-                                <!--/.product-single-->
-
-                                <div class="product-single">
-                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                        <div class="product-thumb">
-                                            <img class="img-responsive" alt="Single product" src="assets/images/gallery_men/02.jpg">
-                                        </div>
-                                        <!--/.product-thumb-->
-                                    </div>
-                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                        <div class="product-info">
-                                            <h2>Printed Black Shirt</h2>
-                                            <h4 class="product-name">T-Shirt</h4>
-                                            <div class="price">
-                                                $40 <del> $50 </del>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-                                            </div>
-                                            <div class="actions">
-                                                <ul>
-                                                    <li><a class="add-cart btn-black" href="single-product.html"><span><span class="icon_plus"></span></span> add to cart</a>
-                                                    </li>
-                                                    <li><a class="btn-black" href="#"><span class="icon_heart_alt"></span></a>
-                                                    </li>
-                                                    <li><a class="btn-black" href="single-product.html"><span class="arrow_expand"></span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--/.product-info-->
-                                    </div>
-                                </div>
-                                <!--/.product-single-->
-
-                                <div class="product-single">
-                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                        <div class="product-thumb">
-                                            <img class="img-responsive" alt="Single product" src="assets/images/gallery_men/03.jpg">
-                                        </div>
-                                        <!--/.product-thumb-->
-                                    </div>
-                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                        <div class="product-info">
-                                            <h2>White Stripe T-Shirt</h2>
-                                            <h4 class="product-name">T-Shirt</h4>
-                                            <div class="price">
-                                                $40 <del> $50 </del>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-                                            </div>
-                                            <div class="actions">
-                                                <ul>
-                                                    <li><a class="btn-black add-cart" href="single-product.html"><span><span class="icon_plus"></span></span> add to cart</a>
-                                                    </li>
-                                                    <li><a class="btn-black" href="#"><span class="icon_heart_alt"></span></a>
-                                                    </li>
-                                                    <li><a class="btn-black" href="single-product.html"><span class="arrow_expand"></span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--/.product-info-->
-                                    </div>
-                                </div>
-                                <!--/.product-single-->
-
-                                <div class="product-single">
-                                    <div class="col-md-4 col-sm-5 col-xs-5">
-                                        <div class="product-thumb">
-                                            <img class="img-responsive" alt="Single product" src="assets/images/gallery_men/04.jpg">
-                                        </div>
-                                        <!--/.product-thumb-->
-                                    </div>
-                                    <div class="col-md-8 col-sm-7 col-xs-7">
-                                        <div class="product-info">
-                                            <h2>Grey Striped Shirt</h2>
-                                            <h4 class="product-name">T-Shirt</h4>
-                                            <div class="price">
-                                                $40 <del> $50 </del>
-                                            </div>
-                                            <div class="entry-content">
-                                                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
-                                            </div>
-                                            <div class="actions">
-                                                <ul>
-                                                    <li><a class="btn-black add-cart" href="single-product.html"><span><span class="icon_plus"></span></span> add to cart</a>
-                                                    </li>
-                                                    <li><a class="btn-black" href="#"><span class="icon_heart_alt"></span></a>
-                                                    </li>
-                                                    <li><a class="btn-black" href="single-product.html"><span class="arrow_expand"></span></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!--/.product-info-->
-                                    </div>
-                                </div>
+                                @endforeach
+                                
                                 <!--/.product-single-->
                             </div>
                             <!--/.col-md-12-->
@@ -459,4 +369,5 @@
     </div>
     <!--/.container-->
 </div>
+
 @endsection

@@ -37,7 +37,7 @@
                                 <!--/.post-thumb-content-->
                                 <div class="post-details">
                                     <h3 class="entry-title">
-                                        <a href="{{url('news/details')}}">New men´s styles in 2016</a>
+                                        <a href="{{url('news/details')}}">New mens styles in 2016</a>
                                     </h3>
                                     <!--/.entry title-->
                                     <div class="entry-meta">
